@@ -13,7 +13,7 @@ pipeline{
         stage('Terraform Init'){
             
             steps {
-                    ansiColor('xterm') {
+                    //ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
                     credentialsId: 'Jenkins',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
@@ -35,7 +35,7 @@ pipeline{
         stage('Terraform Validate'){
             
             steps {
-                    ansiColor('xterm') {
+                    //ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
                     credentialsId: 'Jenkins',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
@@ -56,7 +56,7 @@ pipeline{
         stage('Terraform Plan'){
             steps {
 
-                    ansiColor('xterm') {
+                    //ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
                     credentialsId: 'Jenkins',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
@@ -87,7 +87,7 @@ pipeline{
 
         stage('Terraform Apply'){
             steps {
-                    ansiColor('xterm') {
+                    //ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
                     credentialsId: 'Jenkins',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
