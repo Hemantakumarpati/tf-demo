@@ -36,7 +36,7 @@ pipeline{
         stage('Terraform Validate'){
             
             steps {
-                    //ansiColor('xterm') {
+                    //ansiColor('xterm') 
                     withCredentials([azureServicePrincipal(
                     credentialsId: 'Jenkins',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
@@ -50,9 +50,9 @@ pipeline{
                         terraform validate
                         """
                            }
-                    }
+                    
              }
         }
 
- }
+    }
  }
